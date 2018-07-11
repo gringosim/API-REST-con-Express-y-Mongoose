@@ -13,7 +13,7 @@ const url='mongodb://localhost:27017/conFusion';//AGREGADO PARA END-END
 
 
 const connect=mongoose.connect(url,{//AGREGADO PARA END-END
-   // useMongoClient: true ya no es necesario  en mongoose 5.x
+  useNewUrlParser: true // useMongoClient: true ya no es necesario  en mongoose 5.x
 });
 connect.then((db)=>{
   console.log('Conectado correctamente con el servidor');
